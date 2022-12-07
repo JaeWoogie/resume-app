@@ -5,10 +5,13 @@ import classes from './Resume.module.css';
 
 const Resume = () => {
     return (
-        <Fragment>
-            <AddJob />
-            <JobWrapper />
-        </Fragment>
+        // <Fragment>
+        //     <AddJob />
+        //     <JobWrapper />
+        // </Fragment>
+        <div>
+            This is Resume page
+        </div>
     )
 }
 
