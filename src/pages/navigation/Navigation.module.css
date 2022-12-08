@@ -2,6 +2,22 @@
 a:active,
 a.active {
     color: #95bcf0;
-    padding-bottom: 0.25rem;
+    /* padding-bottom: 0.25rem; */
     /* border-bottom: 4px solid #95bcf0; */
+}
+
+.nav {
+    background-color: green;
+    height: 100px;
+}
+
+.nav-color {
+    color: black;
+    margin-left: 10px;
+}
+
+a:hover,
+a.active {
+    color:blue;
+    /* padding: 1.5px; */
 }

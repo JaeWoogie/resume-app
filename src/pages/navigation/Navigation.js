@@ -1,22 +1,28 @@
 import { NavLink } from 'react-router-dom';
 import classes from './Navigation.module.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap';
+
 
 const Navigation = () => {
     return (    
-        <nav class="navbar navbar-dark bg-primary">
-            <ul>
-                <li>
-                    <NavLink activeClassName={classes.active} to='/welcome'>Home</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={classes.active} to='/resume'>Resume</NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName={classes.active} to='/know-me-better'>Know me better</NavLink>
-                </li>
-            </ul>
-        </nav>
-    )
+    <>
+    <Navbar>
+        <Container fluid>
+        <Navbar.Brand href="/welcome">Jae Lee</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Offcanvas>
+            <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+                <NavLink className={classes["nav-color"]} to="/welcome" activeClassName={classes.active}>Home</NavLink>
+                <NavLink to="/resume" className={classes["nav-color"]} activeClassName={classes.active}>Resume</NavLink>
+            </Nav>
+            </Offcanvas.Body>
+        </Navbar.Offcanvas>
+        </Container>
+    </Navbar>
+    </>
+    );
 }
 
 export default Navigation;

@@ -1,10 +1,9 @@
-import { Fragment } from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
 import Navigation from './pages/navigation/Navigation';
 import Resume from './pages/resume/Resume';
 import Welcome from './pages/welcome/Welcome';
-import Introduction from './pages/know-me-better/Introduction'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -17,9 +16,6 @@ function App() {
           </Route>
           <Route path='/resume'>
             <Resume />
-          </Route>
-          <Route path='/know-me-better'>
-            <Introduction />
           </Route>
           <Route path='/'>
             <Redirect to='/welcome'/>
